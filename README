@@ -3,9 +3,13 @@ by Adam Dunkels <adam@dunkels.com>. More information can be obtained
 at the uIP homepage at
 		     http://dunkels.com/adam/uip/
 
-The directory structure look as follows:
+This is based on some other guys efforts, he did the heavy lifting for uip-0.9. I've ported this to uip-1.0 and added a few enhancements like selecting the networking interface etc.
 
-apps/  - example applications
-doc/   - documentation
-uip/   - actual uIP TCP/IP, SLIP and ARP code
-unix/  - Example of how to run uIP as a user space process under FreeBSD or Linux
+This is tested on Cygwin.
+
+Get in x86-gcc and just `make`.
+
+Then you should be able to run ./uip.exe if everything went well.
+
+uip binds to the IP address which is clearly set in main.c, you can modify it to listen on other IPs. By default it listens on 192.168.1.251:80. So, if you run uip.exe and connect to port 80 of 192.168.1.251 (assuming that you are on same subnet etc) you'll start receiving "hello" strings from the uIP stack.
+
