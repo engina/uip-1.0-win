@@ -48,7 +48,7 @@ pcapdev_init(void)
         }
     }
 
-	printf("Chose: ");
+	printf("Choose: ");
 	int devi;
 	scanf("%d", &devi);
 	device = devices;
