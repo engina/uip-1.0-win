@@ -51,7 +51,7 @@ jobs:
         # queries: ./path/to/local/query, your-org/your-repo/queries@main
 
     - run: |
-        cd uip-1.0-win/x86-gcc/
+        cd $GITHUB_WORKSPACE/x86-gcc/
         make
 
     - name: Perform CodeQL Analysis
